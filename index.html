@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#about">A Propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Maori Sayoud--Leclercq</h1>
+  <h2>Étudiant en informatique</h2>
+
+  <main>
+    <div class="about-container">
+      <img src="images/IMG-9273.jpg" alt="Photo de Moi" class="about-image">
+      <section id="about">
+        <h3 id="aPropos">À Propos de Moi</h3>
+        <p>Bienvenue sur mon Portfolio ! Je m'appelle Maori et je suis étudiant en deuxième année de BUT informatique à l'IUT de Lens.
+        Je possède de multiples compétence en programmation grâce à mon parcours et je reste motivé à apprendre de nouvelle chose et à perfectionner mes acquis. 
+        Je suis une personne sociable, j'aime travailler en équipe et créer des solutions en équipe. N'hésitez pas à me contacter pour plus d'information !</p>
+      </section>
+    </div>
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="projects-row">
+        <div class="project-card">
+          <img id="flatcraft" src="images/flatcraft.png" alt="Image 1">
+          <h3>Flatcraft</h3>
+          <p>En JavaFX, en groupe de quatre, nous avons reproduit le jeu Flatcraft. Ce jeu constitue une version simplifiée du jeu Minecraft en 2D (ou encore Terraria). Le joueur y explore un monde généré de manière aléatoire pour collecter des ressources, combattre des monstres et construire des objets et structures personnalisés.</p>
+            <p class="language">Language : javaFx</p>
+        </div>
+        <div class="project-card">
+          <img id="botDiscord" src="images/bot_discord.png" alt="Image 2">
+          <h3>Bot discord musique (en cours)</h3>
+          <p>Projet personnel en cours de développement, celui-ci consiste à créer un bot Discord capable, avec un lien YouTube donné, de récupérer l'audio de la vidéo et de le jouer dans un appel vocal.</p>
+          <p class="language">Language : Python</p>
+        </div>
+        <div class="project-card">
+          <img id="naraVerse" src="images/naraVerse.png" alt="Image 3">
+          <h3>Marathon du web</h3>
+          <p>Le but est de réaliser un site web afin d'y intégrer une histoire à choix multiples, ainsi qu'un formulaire de création d'histoire pour l'utilisateur. Ce projet a été réalisé en 36 heures consécutives, par une équipe de 9 étudiants (4 en BUT Informatique et 5 en BUT Multimédia).
+            Cette application est réalisée en PHP avec le framework Laravel.</p>
+          <p class="language">Language : php/Laravel</p>  
+        </div>
+      </div>
+      </div>
+      <!-- Ajoutez d'autres projets de la même manière -->
+    </section>
+
+    <section id="skills">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <h3 id="languageCompetence">Langages de Programmation</h3>
+        <div id="carousel">
+          <img id="carouselImage" src="images/python.png" alt="imageCompétence">
+          <button id="prevButton">&larr;</button>
+          <button id="nextButton">&rarr;</button> 
+        </div>
+      </div>
+      <div class="outils">
+        <h3 id="outilsLogiciel">Outils Logiciels</h3>
+        <div id="softwareTools">
+          <img class="softwareToolImage" src="images/PhpStorm.png" alt="PhpStorm">
+          <img class="softwareToolImage" src="images/idea.png" alt="Idea">
+          <img class="softwareToolImage" src="images/pycharm.png" alt="pycharm">
+          <img class="softwareToolImage" src="images/vscode.png" alt="vscode">
+          <img class="softwareToolImage" src="images/Vegas_Pro_15.0.png" alt="Vegas">
+          <!-- Ajoutez d'autres images de la même manière -->
+        </div>
+      </div>
+    </section>
+
+    <div id="contactContainer">
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contactItem">
+          <img src="images/mail.png" alt="Email Icon">
+          <p>maori.sayoudleclercq@gmail.com</p>
+        </div>
+        <div class="contactItem">
+          <img src="images/phone.png" alt="Phone Icon">
+          <p>+33 7 81 42 32 27</p>
+        </div>
+        <div class="contactItem">
+          <a href="https://www.linkedin.com/in/maori-sayoud-leclercq-328908294/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Icon">
+            <p>Maori Sayoud--Leclercq</p>
+          </a>
+        </div>
+      </section>
+      <div>
+        <h2> Mon CV</h2>
+        <a href="resources/cv_maori.pdf" target="_blank">
+          <img id="pdfImage" src="images/cv.png" alt="PDF Image">
+        </a>
+    </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mon Portfolio</p>
+  </footer>
+
+  <script>
+    var images = ["images/php.png", "images/bash.png", "images/plpgsql.png", "images/laravel.png", "images/git.png", "images/gradle.png", "images/java.png"]; // Ajoutez les chemins vers vos images ici
+    var currentIndex = 0;
+    var carouselImage = document.getElementById("carouselImage");
+  
+    document.getElementById("prevButton").addEventListener("click", function() {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+      carouselImage.src = images[currentIndex];
+      carouselImage.classList.add("slide-in");
+    });
+  
+    document.getElementById("nextButton").addEventListener("click", function() {
+      currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+      carouselImage.src = images[currentIndex];
+      carouselImage.classList.add("slide-in");
+    });
+  
+    carouselImage.addEventListener("animationend", function() {
+      this.classList.remove("slide-in");
+    });
+
+    function changeImage() {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    carouselImage.src = images[currentIndex];
+    carouselImage.classList.add("slide-in");
+  }
+  
+    setInterval(changeImage, 3000); // Change l'image toutes les 3 secondes
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* Reset des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Fond noir */
+  color: #000000; /* Texte blanc */
+  padding-top: 70px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+}
+
+header nav ul{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #05747B;
+  color: #fff;
+  padding: 20px;
+  font-size: 25px;
+  list-style-type: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Assure que le header est toujours au-dessus des autres éléments */
+}
+
+header nav ul li:first-child {
+  margin-right: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#aPropos{
+  font-size: x-large;
+  margin-bottom: 1%;
+
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #05747B;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  width: 20%;
+  margin-left: 10%;
+  /* Ajustez la taille de l'image comme vous le souhaitez */
+  border-radius: 10px;
+
+}
+
+#about {
+  width: 50%;
+  margin-right: 10%;
+  /* Ajustez la taille de la section "about" comme vous le souhaitez */
+  font-size: large;
+}
+
+#about p {
+  text-align: justify;
+}
+
+.projects-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-card {
+  width: 30%;
+  text-align: center;
+  background-color: #3f3e3e59;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#flatcraft{
+  width: 30%;
+}
+
+#botDiscord{
+  width: 25%;
+}
+
+#naraVerse{
+  width: 40%;
+}
+
+.project-card img {
+  margin-top: 10px;
+}
+
+.language{
+  padding-top: 15px;
+  font-size: small;
+}
+
+#languageCompetence{
+  text-align: center;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#carouselImage.slide-in {
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+#carouselImage.slide-out {
+  animation: 1s ease-out 0s 1 slideOutFromLeft;
+}
+
+#carouselImage {
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+#prevButton, #nextButton {
+  font-size: 50px;
+  color: #000000;
+  background: none;
+  border: none;
+}
+
+#carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prevButton {
+  position: absolute;
+  left: 70px;
+}
+
+#nextButton {
+  position: absolute;
+  right: 70px;
+}
+
+#softwareTools {
+  display: flex;
+  justify-content: space-around; /* Distribue l'espace autour des images de manière égale */
+}
+
+.softwareToolImage {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+#outilsLogiciel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.outils{
+  background-color: #3f3e3e59;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne les éléments à gauche */
+}
+
+.contactItem {
+  display: flex;
+  align-items: center; /* Aligne la vignette et le texte sur la même ligne */
+  margin-bottom: 20px; /* Ajoute un espace entre les éléments */
+}
+
+.contactItem img {
+  margin-right: 10px; /* Ajoute un espace entre la vignette et le texte */
+  width: 10%;
+}
+
+.contactItem a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#contactContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between; /* Distribue l'espace autour des éléments de manière égale */
+}
+
+#pdfImage {
+  width: 300px; /* Ajustez cette valeur en fonction de la taille souhaitée pour l'image du PDF */
+  height: auto;
+  cursor: pointer; /* Change le curseur en main lorsqu'on survole l'image */
+}
