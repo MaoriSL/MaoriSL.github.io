@@ -101,7 +101,7 @@ footer {
   width: 50%;
   margin-right: 10%;
   /* Ajustez la taille de la section "about" comme vous le souhaitez */
-  font-size: large;
+  font-size: x-large;
 }
 
 #about p {
@@ -252,4 +252,9 @@ footer {
   width: 300px; /* Ajustez cette valeur en fonction de la taille souhaitée pour l'image du PDF */
   height: auto;
   cursor: pointer; /* Change le curseur en main lorsqu'on survole l'image */
+}
+
+.cv-button{
+  color: inherit;
+  text-align: center;
 }
